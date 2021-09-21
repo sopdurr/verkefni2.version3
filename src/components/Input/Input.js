@@ -26,7 +26,7 @@ const Stats = styled.div`
 
 const initList = [];
 
-const theInput = ({ className }) => {
+const theInput = () => {
   const [list, setList] = useState(initList);
   const [name, setName] = useState('');
   const data = {
@@ -77,7 +77,7 @@ const theInput = ({ className }) => {
   }, [sum]);
 
   return (
-    <Center className={className}>
+    <Center>
       <Wrapper>
         <NameInput name={name} onChange={(event) => handleChange(event)} />
         <NumberInput
