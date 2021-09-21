@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
-import {
-  ButtonList,
-  NameInput,
-  NumberInput,
-  TheList,
-} from './index';
+import { ButtonList, NameInput, NumberInput, TheList } from '../index';
 
 const Center = styled.div`
   display: flex;
@@ -84,8 +79,11 @@ const theInput = ({ className }) => {
   return (
     <Center className={className}>
       <Wrapper>
-        <NameInput name={name} onChange={handleChange} />
-        <NumberInput amount={amount} onChange={changeNumber} />
+        <NameInput name={name} onChange={(event) => handleChange(event)} />
+        <NumberInput
+          amount={amount}
+          onChange={(event) => changeNumber(event)}
+        />
         <ButtonList onAdd={addToList} />
         <hr />
         <Stats>

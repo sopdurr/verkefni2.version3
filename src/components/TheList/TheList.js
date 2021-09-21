@@ -1,8 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-
-const TheList = ({ list, onClick }) => {
-  const ListContainer = styled.ul`
+const ListContainer = styled.ul`
   border: 2px solid white;
   height: 300px;
   width: 230px;
@@ -19,7 +17,7 @@ const UnLi = styled.li`
   list-style-type: none;
 
   margin: 10px;
-  border: 2px solid papayawhip;
+  border-bottom: 2px solid papayawhip;
   min-width: 50px;
   height: 30px;
   color: palevioletred;
@@ -47,6 +45,7 @@ const ButtonX = styled.button`
   color: papayawhip;
 `;
 
+const TheList = ({ list, onClick }) => {
   return (
     <ListContainer>
       {list.map((item, index) => (
@@ -61,4 +60,4 @@ const ButtonX = styled.button`
   );
 };
 
-export default TheList
+export default TheList;

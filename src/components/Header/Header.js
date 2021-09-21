@@ -16,9 +16,9 @@ color: palevioletred;
 }
 `
 
-const Header = ({className, text}) => {
+const Header = ({text}) => {
   return (
-    <StyledHeader className={className}>
+    <StyledHeader >
         {text}
     </StyledHeader>
   )
